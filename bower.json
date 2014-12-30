@@ -1,0 +1,26 @@
+{
+  "name": "TwilightZoneMarathon",
+  "version": "1.0.0",
+  "homepage": "https://github.com/jkerry/TwilightZoneMarathon",
+  "description": "A web application to simulate the syfy Twilight Zone marathon",
+  "main": "index.html",
+  "keywords": [
+    "Twilight",
+    "Zone"
+  ],
+  "authors": [
+    "John Kerry"
+  ],
+  "license": "MIT",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "rivets": "~0.7.1"
+  }
+}

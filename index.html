@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <title></title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <link rel="stylesheet" href="css/normalize.min.css">
+        <link rel="stylesheet" href="css/main.css">
+        <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css">
+
+        <!--[if lt IE 9]>
+            <script src="js/vendor/html5-3.6-respond-1.1.0.min.js"></script>
+        <![endif]-->
+    </head>
+    <body>
+        <!-- Fixed navbar -->
+        <nav class="navbar navbar-default navbar-fixed-top">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              <span class="navbar-brand">Twilight Zone Marathon Simulator</span>
+            </div>
+            <div id="navbar" class="collapse navbar-collapse">
+                <ul class="nav navbar-nav navbar-right" rv-if="currentEpisode" id="CurrentEpisode">
+                    <li><span class="navbar-brand">Current Episode: {currentEpisode.episodeName | "test"}</span></li>
+                </ul>
+            </div><!--/.nav-collapse -->
+          </div>
+        </nav>
+
+        <!-- Begin page content -->
+        <div class="container">
+          <div id="Content"></div>
+        </div>
+
+        <footer class="footer">
+          <div class="container">
+            <button id="NextEpisode" class="btn btn-success" 
+            rv-class-btn-warning="nextEpisode.clicked">
+                <span class="glyphicon glyphicon-play" aria-hidden="true"></span>
+                {nextEpisode.episodeName}
+            </button>
+          </div>
+        </footer>
+
+        
+
+        <script src="https://code.jquery.com/jquery-1.11.2.min.js"></script>
+        <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.11.1.min.js"><\/script>')</script>
+        <script src="bower_components/sightglass/index.js"></script>
+        <script src="bower_components/rivets/dist/rivets.min.js"></script>
+
+        <script src="js/main.js"></script>
+
+        <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
+        
+        <script>
+            var observeOffsetMins = 30;
+            var marathonSchedule = [
+                {
+                    episodeName:"The Old Man in the Cave",
+                    huluLink:"http://www.hulu.com/embed.html?eid=w0va30yhraceo1ns2xg9vq",
+                    fireTime:new Date("Wed Dec 31 2014 08:00:00 GMT-0500 (EST)")
+                },
+                {
+                    episodeName:"Caesar and Me",
+                    huluLink:"http://www.hulu.com/embed.html?eid=gjyqlxe3gva_6yqe7xo7dg",
+                    fireTime:new Date("Wed Dec 31 2014 08:30:00 GMT-0500 (EST)")
+                }];
+            var nextEpisode = null;
+            var currentEpisode = null;
+
+            var getAdjustedLocalTime = function(){
+                return new Date();
+            }
+
+            var getNextShowTime = function( time ){
+                return new Date( time.getTime() + observeOffsetMins * 60000 );
+            }
+
+            var filterMArathonScheduleByTime = function(marathonSchedule, time){
+                return marathonSchedule.filter( function ( el ){
+                    return el.fireTime <= time && getNextShowTime(el.fireTime) > time;
+                });
+            }
+
+            var loadNextEpisode = function( marathonSchedule, timeFunction){
+                var time = timeFunction();
+                var validEpisodes = filterMArathonScheduleByTime( marathonSchedule, time);
+                if(validEpisodes != null && validEpisodes[0] != null ){
+                    if(nextEpisode != null && nextEpisode.matches(validEpisodes[0])){
+                        return;
+                    }
+                    cloneNextEpisode(validEpisodes[0]);
+                }
+                else{
+                    console.log("No valid episodes found.  There might be a problem");
+                }
+            } 
+
+            var cloneNextEpisode = function( newNextEpisode ){
+                if(nextEpisode == null){
+                    var episode = {
+                        episodeName:"",
+                        huluLink:"",
+                        fireTime:new Date(),
+                        matches:function( otherEpisode ){
+                            return this.episodeName == otherEpisode.episodeName && this.huluLink == otherEpisode.huluLink;
+                        }
+                    }
+                    nextEpisode = episode;
+                }
+                nextEpisode.episodeName = newNextEpisode.episodeName;
+                nextEpisode.huluLink = newNextEpisode.huluLink;
+                nextEpisode.fireTime = newNextEpisode.fireTime;
+                nextEpisode.clicked = false;
+            }
+
+            var cloneCurrentEpisode = function( newCurrentEpisode ){
+                if(currentEpisode == null){
+                    var episode = {
+                        episodeName:"",
+                        huluLink:"",
+                        fireTime:new Date()
+                    }
+                    currentEpisode = episode;
+                }
+                currentEpisode.episodeName = newCurrentEpisode.episodeName;
+                currentEpisode.huluLink = newCurrentEpisode.huluLink;
+                currentEpisode.fireTime = newCurrentEpisode.fireTime;
+            }
+
+            var renderEpisode = function( target ){
+                if(target != null){
+                    var height = "innerHeight" in window 
+                       ? window.innerHeight
+                       : document.documentElement.offsetHeight; 
+                    var iframeHtml = '<iframe width="100%" height="'+height+'px" src="'+target.huluLink+'" frameborder="0" scrolling="no" webkitAllowFullScreen mozallowfullscreen allowfullscreen></iframe>';
+                    $('#Content').html(iframeHtml);
+                    cloneCurrentEpisode(target);
+                }
+            }
+
+            $(document).ready(function(){                
+                loadNextEpisode(marathonSchedule, getAdjustedLocalTime);
+                $('button#NextEpisode').click(function(elem){ 
+                    renderEpisode(nextEpisode);
+                    nextEpisode.clicked = true; 
+                });
+                renderEpisode(nextEpisode);
+                rivets.bind($('button#NextEpisode'), {nextEpisode: nextEpisode});
+                rivets.bind($('ul#CurrentEpisode'), {currentEpisode: currentEpisode});
+                setInterval(function () {
+                    loadNextEpisode(marathonSchedule, getAdjustedLocalTime);
+                    console.log("Attempted an episode load.");
+                }, 10000);
+            });
+            
+        </script>
+        <script src="js/vendor/bootstrap.min.js"></script>
+        <script>
+            (function(b,o,i,l,e,r){b.GoogleAnalyticsObject=l;b[l]||(b[l]=
+            function(){(b[l].q=b[l].q||[]).push(arguments)});b[l].l=+new Date;
+            e=o.createElement(i);r=o.getElementsByTagName(i)[0];
+            e.src='http://www.google-analytics.com/analytics.js';
+            r.parentNode.insertBefore(e,r)}(window,document,'script','ga'));
+            ga('create','UA-XXXXX-X');ga('send','pageview');
+        </script>
+
+    </body>
+</html>
