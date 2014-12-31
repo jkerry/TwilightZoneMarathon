@@ -61,6 +61,18 @@ textarea {
    Author's custom styles
    ========================================================================== */
 
+#Content {
+    /*padding-top: 60px;*/
+    margin-bottom:60px;
+}
+
+img#headerImg{
+    height:125px;
+}
+
+div#headerText{
+    float:left;
+}
 
 /* Sticky footer styles
 -------------------------------------------------- */

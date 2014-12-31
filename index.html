@@ -32,30 +32,92 @@
               <span class="navbar-brand">Twilight Zone Marathon Simulator</span>
             </div>
             <div id="navbar" class="collapse navbar-collapse">
-                <ul class="nav navbar-nav navbar-right" rv-if="currentEpisode" id="CurrentEpisode">
-                    <li><span class="navbar-brand">Current Episode: {currentEpisode.episodeName | "test"}</span></li>
+                <ul class="nav navbar-nav navbar-right">
+                    <li>
+                        <button id="NextEpisode" class="btn btn-success" 
+                            rv-class-btn-warning="nextEpisode.clicked"
+                            rv-if="nextEpisode.set">
+                                <span class="glyphicon glyphicon-play" aria-hidden="true"></span>
+                                {nextEpisode.episodeName}
+                        </button>
+                    </li>
                 </ul>
             </div><!--/.nav-collapse -->
           </div>
         </nav>
 
         <!-- Begin page content -->
-        <div class="container">
-          <div id="Content"></div>
+        <div id="Content" class="container">
+            <div class="row page-header" >
+                <div class="col-md-8">
+                    <h1>Twilight Zone Marathon Simulator</h1>
+                    <h4>
+                        Because 48 hour marathons with rigid schedules and 
+                        repetitive commercials are an inalienable human (and martian) right. <em>You think about that now.</em>
+                    </h4>
+                </div>
+                <div class="col-md-4">
+                    <img src="img/martian.jpg" id="headerImg" />
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-4">
+                    <h2 class="text-info">What Is this</h2>
+                    <p>The annual Twilight Zone marathon on <del>Syfy</del> <em>Sci-Fi</em> (Never give up. Never surrender) has been a Kerry family tradition for as long as I can remember. Critically important elements of this tradition include:</p>
+                    <ul>
+                        <li>
+                            Opening and being aware of the episode schedule at all times.
+                        </li>
+                        <li>
+                            Calling / texting / yelling at other family members when key episodes fire.
+                        </li>
+                        <li>
+                            Cursing the day that Holes 99786989796 was created since you've listened to the commercial for the Nth time, completely melding it into your subconscious.
+                        </li>
+                        <li>
+                            Lamenting the midnight ball drop, since it will require you halt your addiction for normal human activities.
+                        </li>
+                        <li>
+                            Loathing the regularly scheduled programming and infomercials that cause temporary lapses in coverage.
+                        </li>
+                    </ul>
+                    <p>When my wife and I decided to cut the cord last year we didn't realize the horror we were creating for ourselves. Our error wasn't obvious until that year's Twilight zone marathon plans started rolling in. Yes, you could just binge it all on Netflix like a casual spread over a week. You <em>could<em> just watch a few at a friend's place. My friends- that would make you <strong>Obsolete</strong>.  </p>
+                </div>
+                <div class="col-md-4">
+                    <h2 class="text-info">How It Works</h2>
+                    <p>Every few minutes your browser will check a manually curated list of episodes, their eastern air time, and the embed link for that episode on hulu.  When one is available you'll see a button much like:</p>
+                    <br />
+                    <button class="btn btn-success">Next Episode: The Old Man in the Cave</button>
+                    <p>when clicked this will replace the window contents with the embedded hulu episode. The button will change like so to signify that you've already loaded this episode:</p>
+                    <button class="btn btn-warning">Next Episode: The Old Man in the Cave</button>
+                    <p>~30 minutes later you'll see a change!</p>
+                    <button class="btn btn-success">Next Episode: Caesar and Me</button>
+                    <p>You get where this is going..</p>
+                </div>
+                <div class="col-md-4">
+                    <h2 class="text-info">Find a bug?</h2>
+                    <p>I'll be updating this application as the marathon progresses and my 1.5 year old son allows. If you find any bugs or have a request feel free to send info to <a href="mailto:development@kerryhouse.net">Email Me</a> or check out the <a href="https://github.com/jkerry/TwilightZoneMarathon">Github Page</a>.</p>
+                    <p><strong>It's probably a good idea to refresh the page every few hours to make sure you're on the latest deployed version</strong></p>
+                </div>
+
+            </div>
+            
         </div>
 
         <footer class="footer">
-          <div class="container">
-            <button id="NextEpisode" class="btn btn-success" 
-            rv-class-btn-warning="nextEpisode.clicked">
-                <span class="glyphicon glyphicon-play" aria-hidden="true"></span>
-                {nextEpisode.episodeName}
-            </button>
+          <div class="container" id="CurrentEpisode">
+            <span class="navbar-brand"  id="CurrentEpisode" rv-if="currentEpisode.set">Current Episode: {currentEpisode.episodeName}</span>
           </div>
         </footer>
-
-        
-
+    </body>
+    <script>
+            (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+            (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+            m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+            })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+            ga('create', 'UA-58089266-1', 'auto');
+            ga('send', 'pageview');
+        </script>
         <script src="https://code.jquery.com/jquery-1.11.2.min.js"></script>
         <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.11.1.min.js"><\/script>')</script>
         <script src="bower_components/sightglass/index.js"></script>
@@ -71,15 +133,28 @@
                 {
                     episodeName:"The Old Man in the Cave",
                     huluLink:"http://www.hulu.com/embed.html?eid=w0va30yhraceo1ns2xg9vq",
-                    fireTime:new Date("Wed Dec 31 2014 08:00:00 GMT-0500 (EST)")
+                    fireTime:new Date("Wed Dec 31 2014 08:00:00")
                 },
                 {
                     episodeName:"Caesar and Me",
                     huluLink:"http://www.hulu.com/embed.html?eid=gjyqlxe3gva_6yqe7xo7dg",
-                    fireTime:new Date("Wed Dec 31 2014 08:30:00 GMT-0500 (EST)")
+                    fireTime:new Date("Wed Dec 31 2014 08:30:00")
                 }];
-            var nextEpisode = null;
-            var currentEpisode = null;
+            var nextEpisode = {
+                        episodeName:"",
+                        huluLink:"",
+                        fireTime:new Date(),
+                        set:false,
+                        matches:function( otherEpisode ){
+                            return this.episodeName == otherEpisode.episodeName && this.huluLink == otherEpisode.huluLink;
+                        }
+                    };
+            var currentEpisode = {
+                        episodeName:"",
+                        huluLink:"",
+                        fireTime:new Date(),
+                        set:false
+                    };
 
             var getAdjustedLocalTime = function(){
                 return new Date();
@@ -110,39 +185,22 @@
             } 
 
             var cloneNextEpisode = function( newNextEpisode ){
-                if(nextEpisode == null){
-                    var episode = {
-                        episodeName:"",
-                        huluLink:"",
-                        fireTime:new Date(),
-                        matches:function( otherEpisode ){
-                            return this.episodeName == otherEpisode.episodeName && this.huluLink == otherEpisode.huluLink;
-                        }
-                    }
-                    nextEpisode = episode;
-                }
                 nextEpisode.episodeName = newNextEpisode.episodeName;
                 nextEpisode.huluLink = newNextEpisode.huluLink;
                 nextEpisode.fireTime = newNextEpisode.fireTime;
                 nextEpisode.clicked = false;
+                nextEpisode.set=true;
             }
 
             var cloneCurrentEpisode = function( newCurrentEpisode ){
-                if(currentEpisode == null){
-                    var episode = {
-                        episodeName:"",
-                        huluLink:"",
-                        fireTime:new Date()
-                    }
-                    currentEpisode = episode;
-                }
                 currentEpisode.episodeName = newCurrentEpisode.episodeName;
                 currentEpisode.huluLink = newCurrentEpisode.huluLink;
                 currentEpisode.fireTime = newCurrentEpisode.fireTime;
+                currentEpisode.set=true;
             }
 
             var renderEpisode = function( target ){
-                if(target != null){
+                if(target.set){
                     var height = "innerHeight" in window 
                        ? window.innerHeight
                        : document.documentElement.offsetHeight; 
@@ -158,25 +216,13 @@
                     renderEpisode(nextEpisode);
                     nextEpisode.clicked = true; 
                 });
-                renderEpisode(nextEpisode);
                 rivets.bind($('button#NextEpisode'), {nextEpisode: nextEpisode});
-                rivets.bind($('ul#CurrentEpisode'), {currentEpisode: currentEpisode});
+                rivets.bind($('span#CurrentEpisode'), {currentEpisode: currentEpisode});
                 setInterval(function () {
                     loadNextEpisode(marathonSchedule, getAdjustedLocalTime);
-                    console.log("Attempted an episode load.");
-                }, 10000);
+                }, 60000);
             });
             
         </script>
         <script src="js/vendor/bootstrap.min.js"></script>
-        <script>
-            (function(b,o,i,l,e,r){b.GoogleAnalyticsObject=l;b[l]||(b[l]=
-            function(){(b[l].q=b[l].q||[]).push(arguments)});b[l].l=+new Date;
-            e=o.createElement(i);r=o.getElementsByTagName(i)[0];
-            e.src='http://www.google-analytics.com/analytics.js';
-            r.parentNode.insertBefore(e,r)}(window,document,'script','ga'));
-            ga('create','UA-XXXXX-X');ga('send','pageview');
-        </script>
-
-    </body>
 </html>
