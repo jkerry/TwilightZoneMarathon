@@ -81,11 +81,11 @@
                             Loathing the regularly scheduled programming and infomercials that cause temporary lapses in coverage.
                         </li>
                     </ul>
-                    <p>When my wife and I decided to cut the cord last year we didn't realize the horror we were creating for ourselves. Our error wasn't obvious until that year's Twilight zone marathon plans started rolling in. Yes, you could just binge it all on Netflix like a casual spread over a week. You <em>could<em> just watch a few at a friend's place. My friends- that would make you <strong>Obsolete</strong>.  </p>
+                    <p>When my wife and I decided to cut the cord last year we didn't realize the horror we were creating for ourselves. Our error wasn't obvious until that year's Twilight zone marathon plans started rolling in. Yes, you <em>could<em> just binge it all on Netflix like a casual. You <em>could<em> spread it over a week. You <em>could<em> just watch a few at your mom's place. My friends- that would make you <strong>Obsolete</strong>.  </p>
                 </div>
                 <div class="col-md-4">
                     <h2 class="text-info">How It Works</h2>
-                    <p>Every few minutes your browser will check a manually curated list of episodes, their eastern air time, and the embed link for that episode on hulu.  When one is available you'll see a button much like:</p>
+                    <p>Every few minutes your browser will check a manually curated list of episodes, their air time, and the embed link for that episode on hulu.  When one is available you'll see a button much like:</p>
                     <br />
                     <button class="btn btn-success">Next Episode: The Old Man in the Cave</button>
                     <p>when clicked this will replace the window contents with the embedded hulu episode. The button will change like so to signify that you've already loaded this episode:</p>
@@ -111,118 +111,18 @@
         </footer>
     </body>
     <script>
-            (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-            (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-            m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-            })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
-            ga('create', 'UA-58089266-1', 'auto');
-            ga('send', 'pageview');
-        </script>
-        <script src="https://code.jquery.com/jquery-1.11.2.min.js"></script>
-        <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.11.1.min.js"><\/script>')</script>
-        <script src="bower_components/sightglass/index.js"></script>
-        <script src="bower_components/rivets/dist/rivets.min.js"></script>
-
-        <script src="js/main.js"></script>
-
-        <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
-        
-        <script>
-            var observeOffsetMins = 30;
-            var marathonSchedule = [
-                {
-                    episodeName:"The Old Man in the Cave",
-                    huluLink:"http://www.hulu.com/embed.html?eid=w0va30yhraceo1ns2xg9vq",
-                    fireTime:new Date("Wed Dec 31 2014 08:00:00")
-                },
-                {
-                    episodeName:"Caesar and Me",
-                    huluLink:"http://www.hulu.com/embed.html?eid=gjyqlxe3gva_6yqe7xo7dg",
-                    fireTime:new Date("Wed Dec 31 2014 08:30:00")
-                }];
-            var nextEpisode = {
-                        episodeName:"",
-                        huluLink:"",
-                        fireTime:new Date(),
-                        set:false,
-                        matches:function( otherEpisode ){
-                            return this.episodeName == otherEpisode.episodeName && this.huluLink == otherEpisode.huluLink;
-                        }
-                    };
-            var currentEpisode = {
-                        episodeName:"",
-                        huluLink:"",
-                        fireTime:new Date(),
-                        set:false
-                    };
-
-            var getAdjustedLocalTime = function(){
-                return new Date();
-            }
-
-            var getNextShowTime = function( time ){
-                return new Date( time.getTime() + observeOffsetMins * 60000 );
-            }
-
-            var filterMArathonScheduleByTime = function(marathonSchedule, time){
-                return marathonSchedule.filter( function ( el ){
-                    return el.fireTime <= time && getNextShowTime(el.fireTime) > time;
-                });
-            }
-
-            var loadNextEpisode = function( marathonSchedule, timeFunction){
-                var time = timeFunction();
-                var validEpisodes = filterMArathonScheduleByTime( marathonSchedule, time);
-                if(validEpisodes != null && validEpisodes[0] != null ){
-                    if(nextEpisode != null && nextEpisode.matches(validEpisodes[0])){
-                        return;
-                    }
-                    cloneNextEpisode(validEpisodes[0]);
-                }
-                else{
-                    console.log("No valid episodes found.  There might be a problem");
-                }
-            } 
-
-            var cloneNextEpisode = function( newNextEpisode ){
-                nextEpisode.episodeName = newNextEpisode.episodeName;
-                nextEpisode.huluLink = newNextEpisode.huluLink;
-                nextEpisode.fireTime = newNextEpisode.fireTime;
-                nextEpisode.clicked = false;
-                nextEpisode.set=true;
-            }
-
-            var cloneCurrentEpisode = function( newCurrentEpisode ){
-                currentEpisode.episodeName = newCurrentEpisode.episodeName;
-                currentEpisode.huluLink = newCurrentEpisode.huluLink;
-                currentEpisode.fireTime = newCurrentEpisode.fireTime;
-                currentEpisode.set=true;
-            }
-
-            var renderEpisode = function( target ){
-                if(target.set){
-                    var height = "innerHeight" in window 
-                       ? window.innerHeight
-                       : document.documentElement.offsetHeight; 
-                    var iframeHtml = '<iframe width="100%" height="'+height+'px" src="'+target.huluLink+'" frameborder="0" scrolling="no" webkitAllowFullScreen mozallowfullscreen allowfullscreen></iframe>';
-                    $('#Content').html(iframeHtml);
-                    cloneCurrentEpisode(target);
-                }
-            }
-
-            $(document).ready(function(){                
-                loadNextEpisode(marathonSchedule, getAdjustedLocalTime);
-                $('button#NextEpisode').click(function(elem){ 
-                    renderEpisode(nextEpisode);
-                    nextEpisode.clicked = true; 
-                });
-                rivets.bind($('button#NextEpisode'), {nextEpisode: nextEpisode});
-                rivets.bind($('span#CurrentEpisode'), {currentEpisode: currentEpisode});
-                setInterval(function () {
-                    loadNextEpisode(marathonSchedule, getAdjustedLocalTime);
-                }, 60000);
-            });
-            
-        </script>
-        <script src="js/vendor/bootstrap.min.js"></script>
+        (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+        (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+        m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+        })(window,document,'script','http://www.google-analytics.com/analytics.js','ga');
+        ga('create', 'UA-58089266-1', 'auto');
+        ga('send', 'pageview');
+    </script>
+    <script src="https://code.jquery.com/jquery-1.11.2.min.js"></script>
+    <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.11.1.min.js"><\/script>')</script>
+    <script src="bower_components/sightglass/index.js"></script>
+    <script src="bower_components/rivets/dist/rivets.min.js"></script>
+    <script src="js/marathonSchedule.js"></script>
+    <script src="js/main.js"></script>
+    <script src="js/vendor/bootstrap.min.js"></script>
 </html>
