@@ -74,5 +74,16 @@ var marathonSchedule = [
 {huluLink:"http://www.hulu.com/embed.html?eid=hnr9ss7o5o4fmhh1pkpfsq",episodeName:"The Howling Man",fireTime:new Date("Thu Jan 1 2015 10:00:00 PM")},
 {huluLink:"http://www.hulu.com/embed.html?eid=8tkfa91-ntyeskfr03hjxg",episodeName:"The Eye of the Beholder",fireTime:new Date("Thu Jan 1 2015 10:30:00 PM")},
 {huluLink:"http://www.hulu.com/embed.html?eid=n4hfqgg5gplaplgmafpmzq",episodeName:"The Shelter",fireTime:new Date("Thu Jan 1 2015 11:00:00 PM")},
-{huluLink:"http://www.hulu.com/embed.html?eid=_u8o97hezvbvbox0awgkdw",episodeName:"I am the Night — Color Me Black",fireTime:new Date("Thu Jan 1 2015 11:30:00 PM")}
+{huluLink:"http://www.hulu.com/embed.html?eid=_u8o97hezvbvbox0awgkdw",episodeName:"I am the Night — Color Me Black",fireTime:new Date("Thu Jan 1 2015 11:30:00 PM")},
+{huluLink:"http://www.hulu.com/embed.html?eid=zokzvuff5kgdscklx9mipq",episodeName:"Long Distance Call",fireTime:new Date("Fri Jan 2 2015 12:00:00 AM")},
+{huluLink:"http://www.hulu.com/embed.html?eid=je2jgweszp2_k_9rzhhwvg",episodeName:"Judgment Night",fireTime:new Date("Fri Jan 2 2015 12:30:00 AM")},
+{huluLink:"http://www.hulu.com/embed.html?eid=evzophszqprwrm99j_ctkw",episodeName:"Nightmare as a Child",fireTime:new Date("Fri Jan 2 2015 01:00:00 AM")},
+{huluLink:"http://www.hulu.com/embed.html?eid=wnn_3oc9nfuump7oz0vihg",episodeName:"The Grave",fireTime:new Date("Fri Jan 2 2015 01:30:00 AM")},
+{huluLink:"http://www.hulu.com/embed.html?eid=vndim9xftblsi80u5ljzpg",episodeName:"The Four of Us are Dying",fireTime:new Date("Fri Jan 2 2015 02:00:00 AM")},
+{huluLink:"http://www.hulu.com/embed.html?eid=taqyhz2ylihyyw-2w4fy0w",episodeName:"A World of His Own",fireTime:new Date("Fri Jan 2 2015 02:30:00 AM")},
+{huluLink:"http://www.hulu.com/embed.html?eid=x3a49mxz8stkohk01uj4bw",episodeName:"In Praise of Pip",fireTime:new Date("Fri Jan 2 2015 03:00:00 AM")},
+{huluLink:"http://www.hulu.com/embed.html?eid=ethfwtnwefwlabene1obtg",episodeName:"The Fever",fireTime:new Date("Fri Jan 2 2015 03:30:00 AM")},
+{huluLink:"http://www.hulu.com/embed.html?eid=zlx0-vb1eitkj6i-e-mq0q",episodeName:"The Last Rites of Jeff Myrtlebank",fireTime:new Date("Fri Jan 2 2015 04:00:00 AM")},
+{huluLink:"http://www.hulu.com/embed.html?eid=zbbs1ngqqunxjsjb2d7z_a",episodeName:"What You Need",fireTime:new Date("Fri Jan 2 2015 04:30:00 AM")},
+{huluLink:"http://www.hulu.com/embed.html?eid=waiqncxjkdvp4szsyf1gcg",episodeName:"The New Exhibit",fireTime:new Date("Fri Jan 2 2015 05:00:00 AM")}
 ];
