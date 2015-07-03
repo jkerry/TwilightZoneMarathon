@@ -85,5 +85,13 @@ var marathonSchedule = [
 {huluLink:"http://www.hulu.com/embed.html?eid=ethfwtnwefwlabene1obtg",episodeName:"The Fever",fireTime:new Date("Fri Jan 2 2015 03:30:00 AM")},
 {huluLink:"http://www.hulu.com/embed.html?eid=zlx0-vb1eitkj6i-e-mq0q",episodeName:"The Last Rites of Jeff Myrtlebank",fireTime:new Date("Fri Jan 2 2015 04:00:00 AM")},
 {huluLink:"http://www.hulu.com/embed.html?eid=zbbs1ngqqunxjsjb2d7z_a",episodeName:"What You Need",fireTime:new Date("Fri Jan 2 2015 04:30:00 AM")},
-{huluLink:"http://www.hulu.com/embed.html?eid=waiqncxjkdvp4szsyf1gcg",episodeName:"The New Exhibit",fireTime:new Date("Fri Jan 2 2015 05:00:00 AM")}
+{huluLink:"http://www.hulu.com/embed.html?eid=waiqncxjkdvp4szsyf1gcg",episodeName:"The New Exhibit",fireTime:new Date("Fri Jan 2 2015 05:00:00 AM")},
+{huluLink:"http://www.hulu.com/embed.html?eid=e5vx2in3lmnlrjnv6imfma",episodeName:"Little Girl Lost",fireTime:new Date("Sat July 4 2015 08:00:00 AM")},
+{huluLink:"http://www.hulu.com/embed.html?eid=rf_hnumckl1kqrjr8cy6fq",episodeName:"The After Hours",fireTime:new Date("Sat July 4 2015 08:30:00 AM")},
+{huluLink:"http://www.hulu.com/embed.html?eid=gqk9xfcewnv1fj8dm0zfvw",episodeName:"The Little People",fireTime:new Date("Sat July 4 2015 09:00:00 AM")},
+{huluLink:"http://www.hulu.com/embed.html?eid=typs9q1grz5dpvjzrwdlhw",episodeName:"Mr. Dingle, The Strong",fireTime:new Date("Sat July 4 2015 09:30:00 AM")},
+{huluLink:"http://www.hulu.com/embed.html?eid=pfjhvxhx4ykjtaraxh5fjw",episodeName:"A Kind of Stopwatch",fireTime:new Date("Sat July 4 2015 10:00:00 AM")},
+{huluLink:"http://www.hulu.com/embed.html?eid=zokzvuff5kgdscklx9mipq",episodeName:"Long Distance Call",fireTime:new Date("Sat July 4 2015 10:30:00 AM")},
+{huluLink:"http://www.hulu.com/embed.html?eid=gtmwyflajjvxnq9pktx_xq",episodeName:"A Game of Pool",fireTime:new Date("Sat July 4 2015 11:00:00 AM")},
+{huluLink:"http://www.hulu.com/embed.html?eid=ctiibupeopmcyovsfvx-gq",episodeName:"A Most Unusual Camera",fireTime:new Date("Sat July 4 2015 11:30:00 AM")}
 ];
