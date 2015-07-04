@@ -91,7 +91,9 @@ var marathonSchedule = [
 {huluLink:"http://www.hulu.com/embed.html?eid=gqk9xfcewnv1fj8dm0zfvw",episodeName:"The Little People",fireTime:new Date("Sat July 4 2015 09:00:00 AM")},
 {huluLink:"http://www.hulu.com/embed.html?eid=typs9q1grz5dpvjzrwdlhw",episodeName:"Mr. Dingle, The Strong",fireTime:new Date("Sat July 4 2015 09:30:00 AM")},
 {huluLink:"http://www.hulu.com/embed.html?eid=pfjhvxhx4ykjtaraxh5fjw",episodeName:"A Kind of Stopwatch",fireTime:new Date("Sat July 4 2015 10:00:00 AM")},
-{huluLink:"http://www.hulu.com/embed.html?eid=zokzvuff5kgdscklx9mipq",episodeName:"Long Distance Call",fireTime:new Date("Sat July 4 2015 10:30:00 AM")},
-{huluLink:"http://www.hulu.com/embed.html?eid=gtmwyflajjvxnq9pktx_xq",episodeName:"A Game of Pool",fireTime:new Date("Sat July 4 2015 11:00:00 AM")},
-{huluLink:"http://www.hulu.com/embed.html?eid=ctiibupeopmcyovsfvx-gq",episodeName:"A Most Unusual Camera",fireTime:new Date("Sat July 4 2015 11:30:00 AM")}
+{huluLink:"http://www.hulu.com/embed.html?eid=4bfys_h7oefe4hffveaahw",episodeName:"A Hundred Yards Over the Rim",fireTime:new Date("Sat July 4 2015 10:30:00 AM")},
+{huluLink:"http://www.hulu.com/embed.html?eid=zokzvuff5kgdscklx9mipq",episodeName:"Long Distance Call",fireTime:new Date("Sat July 4 2015 11:00:00 AM")},
+{huluLink:"http://www.hulu.com/embed.html?eid=gtmwyflajjvxnq9pktx_xq",episodeName:"A Game of Pool",fireTime:new Date("Sat July 4 2015 11:30:00 AM")},
+{huluLink:"http://www.hulu.com/embed.html?eid=ctiibupeopmcyovsfvx-gq",episodeName:"A Most Unusual Camera",fireTime:new Date("Sat July 4 2015 12:00:00 PM")},
+{huluLink:"http://www.hulu.com/embed.html?eid=xeo6mvolq43lg-zbhcbtia",episodeName:"Stopover in a Quiet Town",fireTime:new Date("Sat July 4 2015 12:30:00 PM")}
 ];
