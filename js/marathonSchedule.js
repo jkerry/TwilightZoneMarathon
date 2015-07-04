@@ -105,5 +105,19 @@ var marathonSchedule = [
 {huluLink:"http://www.hulu.com/embed.html?eid=zgpdk_9blrockngqjxqhxw",episodeName:"Kick the Can",fireTime:new Date("Sat July 4 2015 03:30:00 PM")},
 {huluLink:"http://www.hulu.com/embed.html?eid=jpsbq2p_-oo4z6untu9iua",episodeName:"Where is Everybody?",fireTime:new Date("Sat July 4 2015 04:00:00 PM")},
 {huluLink:"http://www.hulu.com/embed.html?eid=h5e4k-8lq4at_sy4yfkppw",episodeName:"It’s a Good Life",fireTime:new Date("Sat July 4 2015 04:30:00 PM")},
-{huluLink:"http://www.hulu.com/embed.html?eid=8iqvkz7rz0vwhtwthpo-2w",episodeName:"The Hitch-Hiker",fireTime:new Date("Sat July 4 2015 05:00:00 PM")}
+{huluLink:"http://www.hulu.com/embed.html?eid=8iqvkz7rz0vwhtwthpo-2w",episodeName:"The Hitch-Hiker",fireTime:new Date("Sat July 4 2015 05:00:00 PM")},
+{huluLink:"http://www.hulu.com/embed.html?eid=xo5iprqwsxmjcqewlxacla",episodeName:"Third From the Sun",fireTime:new Date("Sat July 4 2015 05:30:00 PM")},
+{huluLink:"http://www.hulu.com/embed.html?eid=81kkb9nzhipldl0ckjor6g",episodeName:"The Bewitchin’ Pool",fireTime:new Date("Sat July 4 2015 06:00:00 PM")},
+{huluLink:"http://www.hulu.com/embed.html?eid=xzbgqzbsy2wa2zux3salca",episodeName:"The Masks",fireTime:new Date("Sat July 4 2015 06:30:00 PM")},
+{huluLink:"http://www.hulu.com/embed.html?eid=8tkfa91-ntyeskfr03hjxg",episodeName:"The Eye of the Beholder",fireTime:new Date("Sat July 4 2015 07:00:00 PM")},
+{huluLink:"http://www.hulu.com/embed.html?eid=zxvw23d75-rkaarivuax5w",episodeName:"The Obsolete Man",fireTime:new Date("Sat July 4 2015 07:30:00 PM")},
+{huluLink:"http://www.hulu.com/embed.html?eid=tgzxsiuq3acho5eiqcnkha",episodeName:"The Monsters are Due on Maple Street",fireTime:new Date("Sat July 4 2015 08:00:00 PM")},
+{huluLink:"http://www.hulu.com/embed.html?eid=xnj8msf_reaguuxqcll3uq",episodeName:"A Stop at Willoughby",fireTime:new Date("Sat July 4 2015 08:30:00 PM")},
+{huluLink:"http://www.hulu.com/embed.html?eid=dqprbz3jmsmtbggonuz-ua",episodeName:"Will the Real Martian Please Stand Up?",fireTime:new Date("Sat July 4 2015 09:00:00 PM")},
+{huluLink:"http://www.hulu.com/embed.html?eid=ldi_54ezxkfao8web1kv3q",episodeName:"To Serve Man",fireTime:new Date("Sat July 4 2015 09:30:00 PM")},
+{huluLink:"http://www.hulu.com/embed.html?eid=6ucan6f7jx7avp4m-skaja",episodeName:"Nightmare at 20,000 Feet",fireTime:new Date("Sat July 4 2015 10:00:00 PM")},
+{huluLink:"http://www.hulu.com/embed.html?eid=p1yndnfol2xvxa8lbowpxw",episodeName:"Time Enough at Last",fireTime:new Date("Sat July 4 2015 10:30:00 PM")},
+{huluLink:"http://www.hulu.com/embed.html?eid=-m_bnrxinh91neffnne-pa",episodeName:"Living Doll",fireTime:new Date("Sat July 4 2015 11:00:00 PM")},
+{huluLink:"http://www.hulu.com/embed.html?eid=lglisuhixrwi3d6iwx_zpg",episodeName:"The Odyssey of Flight 33",fireTime:new Date("Sat July 4 2015 11:30:00 PM")}
+
 ];
