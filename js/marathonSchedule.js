@@ -118,6 +118,12 @@ var marathonSchedule = [
 {huluLink:"http://www.hulu.com/embed.html?eid=6ucan6f7jx7avp4m-skaja",episodeName:"Nightmare at 20,000 Feet",fireTime:new Date("Sat July 4 2015 10:00:00 PM")},
 {huluLink:"http://www.hulu.com/embed.html?eid=p1yndnfol2xvxa8lbowpxw",episodeName:"Time Enough at Last",fireTime:new Date("Sat July 4 2015 10:30:00 PM")},
 {huluLink:"http://www.hulu.com/embed.html?eid=-m_bnrxinh91neffnne-pa",episodeName:"Living Doll",fireTime:new Date("Sat July 4 2015 11:00:00 PM")},
-{huluLink:"http://www.hulu.com/embed.html?eid=lglisuhixrwi3d6iwx_zpg",episodeName:"The Odyssey of Flight 33",fireTime:new Date("Sat July 4 2015 11:30:00 PM")}
-
+{huluLink:"http://www.hulu.com/embed.html?eid=lglisuhixrwi3d6iwx_zpg",episodeName:"The Odyssey of Flight 33",fireTime:new Date("Sat July 4 2015 11:30:00 PM")},
+{huluLink:"http://www.hulu.com/embed.html?eid=ozbdwocmlwh7ugtl-feheg",episodeName:"The Midnight Sun",fireTime:new Date("Sun July 5 2015 12:00:00 AM")},
+{huluLink:"http://www.hulu.com/embed.html?eid=hnr9ss7o5o4fmhh1pkpfsq",episodeName:"The Howling Man",fireTime:new Date("Sun July 5 2015 12:30:00 AM")},
+{huluLink:"http://www.hulu.com/embed.html?eid=l-u6eageoqj8tplzy9p-eg",episodeName:"The Invaders",fireTime:new Date("Sun July 5 2015 01:00:00 AM")},
+{huluLink:"http://www.hulu.com/embed.html?eid=rpyitcstczfeurkhxmtryq",episodeName:"Dummy",fireTime:new Date("Sun July 5 2015 01:30:00 AM")},
+{huluLink:"http://www.hulu.com/embed.html?eid=vciuzf5ynb1quu02tnp--a",episodeName:"Dead Man’s Shoes",fireTime:new Date("Sun July 5 2015 02:00:00 AM")},
+{huluLink:"http://www.hulu.com/embed.html?eid=xyyudrzc5691btibfov_wa",episodeName:"Night of the Meek",fireTime:new Date("Sun July 5 2015 02:30:00 AM")},
+{huluLink:"http://www.hulu.com/embed.html?eid=m18af6vp9mmu-ciouc1cmq",episodeName:"Night Call",fireTime:new Date("Sun July 5 2015 03:00:00 AM")}
 ];
