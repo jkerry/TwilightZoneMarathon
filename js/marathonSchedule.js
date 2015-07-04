@@ -86,6 +86,7 @@ var marathonSchedule = [
 {huluLink:"http://www.hulu.com/embed.html?eid=zlx0-vb1eitkj6i-e-mq0q",episodeName:"The Last Rites of Jeff Myrtlebank",fireTime:new Date("Fri Jan 2 2015 04:00:00 AM")},
 {huluLink:"http://www.hulu.com/embed.html?eid=zbbs1ngqqunxjsjb2d7z_a",episodeName:"What You Need",fireTime:new Date("Fri Jan 2 2015 04:30:00 AM")},
 {huluLink:"http://www.hulu.com/embed.html?eid=waiqncxjkdvp4szsyf1gcg",episodeName:"The New Exhibit",fireTime:new Date("Fri Jan 2 2015 05:00:00 AM")},
+//4th of july 2015 marathon schedule
 {huluLink:"http://www.hulu.com/embed.html?eid=e5vx2in3lmnlrjnv6imfma",episodeName:"Little Girl Lost",fireTime:new Date("Sat July 4 2015 08:00:00 AM")},
 {huluLink:"http://www.hulu.com/embed.html?eid=rf_hnumckl1kqrjr8cy6fq",episodeName:"The After Hours",fireTime:new Date("Sat July 4 2015 08:30:00 AM")},
 {huluLink:"http://www.hulu.com/embed.html?eid=gqk9xfcewnv1fj8dm0zfvw",episodeName:"The Little People",fireTime:new Date("Sat July 4 2015 09:00:00 AM")},
@@ -95,5 +96,14 @@ var marathonSchedule = [
 {huluLink:"http://www.hulu.com/embed.html?eid=zokzvuff5kgdscklx9mipq",episodeName:"Long Distance Call",fireTime:new Date("Sat July 4 2015 11:00:00 AM")},
 {huluLink:"http://www.hulu.com/embed.html?eid=gtmwyflajjvxnq9pktx_xq",episodeName:"A Game of Pool",fireTime:new Date("Sat July 4 2015 11:30:00 AM")},
 {huluLink:"http://www.hulu.com/embed.html?eid=ctiibupeopmcyovsfvx-gq",episodeName:"A Most Unusual Camera",fireTime:new Date("Sat July 4 2015 12:00:00 PM")},
-{huluLink:"http://www.hulu.com/embed.html?eid=xeo6mvolq43lg-zbhcbtia",episodeName:"Stopover in a Quiet Town",fireTime:new Date("Sat July 4 2015 12:30:00 PM")}
+{huluLink:"http://www.hulu.com/embed.html?eid=xeo6mvolq43lg-zbhcbtia",episodeName:"Stopover in a Quiet Town",fireTime:new Date("Sat July 4 2015 12:30:00 PM")},
+{huluLink:"http://www.hulu.com/embed.html?eid=1dfoxtxrhfny6xownwoitw",episodeName:"Number 12 Looks Just Like You",fireTime:new Date("Sat July 4 2015 01:00:00 PM")},
+{huluLink:"http://www.hulu.com/embed.html?eid=nush1k7tvt4ha6dusfb7mg",episodeName:"A Penny for Your Thoughts",fireTime:new Date("Sat July 4 2015 01:30:00 PM")},
+{huluLink:"http://www.hulu.com/embed.html?eid=mjgto2tobtvj1c3t7-cm3g",episodeName:"I Sing the Body Electric",fireTime:new Date("Sat July 4 2015 02:00:00 PM")},
+{huluLink:"http://www.hulu.com/embed.html?eid=0jqqyl-3q0nvyaqsmkhkta",episodeName:"Five Characters in Search of an Exit",fireTime:new Date("Sat July 4 2015 02:30:00 PM")},
+{huluLink:"http://www.hulu.com/embed.html?eid=5i6qsbcju7kavboq4g1q7a",episodeName:"Nick of Time",fireTime:new Date("Sat July 4 2015 03:00:00 PM")},
+{huluLink:"http://www.hulu.com/embed.html?eid=zgpdk_9blrockngqjxqhxw",episodeName:"Kick the Can",fireTime:new Date("Sat July 4 2015 03:30:00 PM")},
+{huluLink:"http://www.hulu.com/embed.html?eid=jpsbq2p_-oo4z6untu9iua",episodeName:"Where is Everybody?",fireTime:new Date("Sat July 4 2015 04:00:00 PM")},
+{huluLink:"http://www.hulu.com/embed.html?eid=h5e4k-8lq4at_sy4yfkppw",episodeName:"It’s a Good Life",fireTime:new Date("Sat July 4 2015 04:30:00 PM")},
+{huluLink:"http://www.hulu.com/embed.html?eid=8iqvkz7rz0vwhtwthpo-2w",episodeName:"The Hitch-Hiker",fireTime:new Date("Sat July 4 2015 05:00:00 PM")}
 ];
