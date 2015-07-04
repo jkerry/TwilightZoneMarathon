@@ -38,7 +38,7 @@ var loadNextEpisode = function( marathonSchedule, timeFunction){
             return;
         }
         cloneNextEpisode(validEpisodes[0]);
-        _gaq.push(['_trackEvent', 'Episode', 'Loaded', nextEpisode.episodeName]);
+        _gaq.push(['_trackEvent', 'Episode['+nextEpisode.episodeName+']', 'Loaded']);
     }
     else{
         console.log("No valid episodes found.  There might be a problem");
@@ -68,7 +68,7 @@ var renderEpisode = function( target ){
         var iframeHtml = '<iframe width="100%" height="'+height+'px" src="'+target.huluLink+'" frameborder="0" scrolling="no" webkitAllowFullScreen mozallowfullscreen allowfullscreen></iframe>';
         $('#Content').html(iframeHtml);
         cloneCurrentEpisode(target);
-        _gaq.push(['_trackEvent', 'Episode', 'Played', currentEpisode.episodeName]);
+        _gaq.push(['_trackEvent', 'Episode['+currentEpisode.episodeName+']', 'Played']);
     }
 }
 
