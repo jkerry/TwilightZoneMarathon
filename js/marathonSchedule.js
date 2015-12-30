@@ -127,7 +127,7 @@ var marathonSchedule = [
 {huluLink:"http://www.hulu.com/embed.html?eid=xyyudrzc5691btibfov_wa",episodeName:"Night of the Meek",fireTime:new Date("Sun July 5 2015 02:30:00 AM")},
 {huluLink:"http://www.hulu.com/embed.html?eid=m18af6vp9mmu-ciouc1cmq",episodeName:"Night Call",fireTime:new Date("Sun July 5 2015 03:00:00 AM")},
 //New Years Eve 2015
-{huluLink:"http://www.hulu.com/embed.html?eid=jpsbq2p_-oo4z6untu9iua",episodeName:"Where is Everybody?",fireTime:new Date("Dec 29 2015  11:00PM")},
+{huluLink:"http://www.hulu.com/embed.html?eid=jpsbq2p_-oo4z6untu9iua",episodeName:"Where is Everybody?",fireTime:new Date("Dec 29 2015  11:30PM")},
 {huluLink:"http://www.hulu.com/embed.html?eid=ddpcmf70zugzurl_1qocea",episodeName:"One For the Angels",fireTime:new Date("Dec 30 2015  7:30PM")},
 {huluLink:"http://www.hulu.com/embed.html?eid=8nghaweagnprmauybk-zng",episodeName:"Mr. Denton on Doomsday",fireTime:new Date("Dec 30 2015  8:00PM")},
 {huluLink:"http://www.hulu.com/embed.html?eid=ivhwtz-nhxfjcgvqwe-7eg",episodeName:"The Sixteen-Millimeter Shrine",fireTime:new Date("Dec 30 2015  8:30PM")},
